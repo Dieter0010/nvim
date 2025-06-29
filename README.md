@@ -1,4 +1,6 @@
-# INSTALLATION
+most of the config comes from [https://github.com/hannan-ahmad/My-Current-Neovim-Config.git](here).
+
+# ORIGINAL INSTALLATION
 
 ## LINUX/MACOS
 `git clone https://github.com/hannan-ahmad/My-Current-Neovim-Config.git ~/.config/nvim`
