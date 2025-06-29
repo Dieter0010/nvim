@@ -1,4 +1,4 @@
-most of the config comes from [https://github.com/hannan-ahmad/My-Current-Neovim-Config.git](here).
+most of the config comes from (https://github.com/hannan-ahmad/My-Current-Neovim-Config.git)[here].
 
 # ORIGINAL INSTALLATION
 
