@@ -6,7 +6,6 @@ require("preferences")
 require("installing-lazy")
 require("keymaps")
 require("icons").setup()
-require("render-markdown").setup()
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
 	nested = true,
