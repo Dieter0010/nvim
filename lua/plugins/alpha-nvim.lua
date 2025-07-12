@@ -32,7 +32,7 @@ return {
 		dashboard.section.buttons.val = {
 			button("<Control>N", "  File Explorer"),
 			button("<Leader>ff", "  Find File"),
-			button("<Leader>fw", "  Find Word"),
+--			button("<Leader>fw", "  Find Word"),
 			button("q", "󰩈 Quit", ":qa<cr>"),
 		}
 

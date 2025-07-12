@@ -42,6 +42,31 @@ return {
       },
       maximum_length = 25,
     })
+	local map = vim.keymap.set
+	local opts = { noremap = true, silent = true }
+
+	-- Navigate buffers
+	map("n", "<leader>bh", "<Cmd>BufferPrevious<CR>", opts) -- go left
+	map("n", "<leader>bl", "<Cmd>BufferNext<CR>", opts)     -- go right
+
+	-- Move buffer positions
+	map("n", "<leader>bH", "<Cmd>BufferMovePrevious<CR>", opts)
+	map("n", "<leader>bL", "<Cmd>BufferMoveNext<CR>", opts)
+
+	-- Go to buffer 1–9, and 0 for last
+	for i = 1, 9 do
+	  map("n", "<leader>" .. i, "<Cmd>BufferGoto " .. i .. "<CR>", opts)
+	end
+	map("n", "<leader>b0", "<Cmd>BufferLast<CR>", opts)
+
+	-- Pin and close
+	map("n", "<leader>bp", "<Cmd>BufferPin<CR>", opts)
+	map("n", "<leader>bc", "<Cmd>BufferClose<CR>", opts)
+
+	-- Sorting
+	map("n", "<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
+	map("n", "<leader>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
+	map("n", "<leader>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
   end,
   event = "BufReadPre", -- or remove this to load on startup
 }
