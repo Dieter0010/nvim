@@ -4,7 +4,7 @@ map("n", "<C-n>", ":Neotree filesystem reveal left toggle<CR>")
 map("n", "<leader>e", ":Neotree focus<CR>")
 
 map("n", "<leader>ff", ":Telescope find_files<CR>")
-map("n", "<leader>of", ":Telescope old_files<CR>")
+map("n", "<leader>of", ":Telescope oldfiles<CR>")
 map("n", "<leader>th", ":Telescope colorscheme<CR>")
 map("n", "<leader>lp", ":Telescope lsp_document_symbols<CR>")
 map("n", "<leader>lr", ":Telescope lsp_references<CR>")
