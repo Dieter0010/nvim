@@ -5,6 +5,11 @@ dependencies = { "nvim-treesitter/nvim-treesitter" },
 ft = { "markdown" },
 config = function()
 require('render-markdown').setup({
+	render = {
+		heading = {
+			indent = false,
+				},
+			},
     link = {
         -- Turn on / off inline link icon rendering.
         enabled = true,
@@ -127,7 +132,8 @@ require('render-markdown').setup({
         highlight = 'RenderMarkdownBullet',
         scope_highlight = {},
     },
-    quote = { icon = '▋' },
+    -- quote = { icon = '▋' },
+    quote = { icon = '❯' },
     anti_conceal = {
         enabled = true,
         -- Which elements to always show, ignoring anti conceal behavior. Values can either be
