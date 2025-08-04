@@ -20,3 +20,22 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 		vim.g.SCHEME = params.match
 	end,
 })
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*",
+  callback = function()
+    local first_line = vim.fn.getline(1)
+    if first_line:match("^#!.*/bash") then
+      vim.bo.filetype = "sh"
+    end
+  end,
+})
+
+local cleaned = {}
+for _, file in ipairs(vim.v.oldfiles) do
+  if vim.fn.filereadable(file) == 1 then
+    table.insert(cleaned, file)
+  end
+end
+vim.v.oldfiles = cleaned
+vim.cmd('wshada')
