@@ -9,12 +9,13 @@ return {
   end,
   config = function()
     require("barbar").setup({
-      animation = false,
+	  auto_hide = true,
+      animation = true,
       tabpages = true,
       focus_on_close = "left",
       hide = { extensions = false, inactive = false },
       icons = {
-        buffer_index = false,
+        buffer_index = true,
         buffer_number = false,
         button = "",
         diagnostics = {
@@ -32,7 +33,7 @@ return {
         alternate = { filetype = { enabled = false } },
         current = { buffer_index = true },
         inactive = { button = "×" },
-        visible = { modified = { buffer_number = false } },
+        visible = { modified = { buffer_number = true } },
       },
       sidebar_filetypes = {
         NvimTree = true,
@@ -66,7 +67,7 @@ return {
 	-- Sorting
 	map("n", "<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
 	map("n", "<leader>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
-	map("n", "<leader>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
+	-- map("n", "<leader>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
   end,
   event = "BufReadPre", -- or remove this to load on startup
 }
